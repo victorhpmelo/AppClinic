@@ -1,0 +1,15 @@
+﻿@model Patient
+
+<form asp-action="create">
+    <label>Name</label>
+    <input asp-for="PatientName" placeholder="Insert your name" required/>
+
+    <label>Birth Date</label>
+    <input asp-for="BirthDate"/>
+
+    <label>Paycheck</label>
+    <input asp-for="Paycheck"/>
+
+    <input type="submit" class="btn btn-dark" value="Send"/>
+
+</form>

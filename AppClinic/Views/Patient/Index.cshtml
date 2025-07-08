@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Patient>
+
+<a asp-action="Create"><button class="btn btn-dark"> Register new Patient</button></a>
+<table class="table table-striped">
+     <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>@Html.DisplayNameFor(model => model.BirthDate)</th>
+        <th>Paycheck</th>
+        <th>Actions</th>
+    </tr>
+     </thead>
+     <tbody>
+        @foreach (var patient in Model)
+        {
+        <tr>
+            <td>@patient.PatientId</td>
+            <td>@patient.PatientName</td>
+            <td>@patient.BirthDate.ToString("dd/MM/yyyy")</td>
+            <td>$@patient.Paycheck</td>
+         <td>
+        <button type="button" class="btn btn-warning" style="color: white">Edit</button>
+        <button type ="button" class="btn btn-danger"><i class="bi bi-trash"></i>Delete</button>
+         </td>
+         </tr>
+        }
+     </tbody>
+</table>

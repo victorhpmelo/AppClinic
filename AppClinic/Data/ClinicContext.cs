@@ -9,5 +9,6 @@ namespace AppClinic.Data
         { }
 
         public DbSet<Patient> Patient { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
     }
 }

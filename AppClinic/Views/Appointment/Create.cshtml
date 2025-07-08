@@ -1,0 +1,28 @@
+﻿@model AppClinic.Models.Appointment
+
+
+@{
+    ViewData["Title"] = "New Appointment";
+}
+
+<form asp-action="Create">
+
+    <label> Patient</label>
+    <input asp-for="Patient"/>
+
+    <label asp-for="Specialty"></label>
+    <input asp-for="Specialty" />
+
+    <label asp-for="Doctor"></label>
+    <input asp-for="Doctor" />
+
+    <label asp-for="AppointmentDateTime"></label>
+    <input asp-for="AppointmentDateTime" />
+
+    <label asp-for="AppointmentType"></label>
+    <input asp-for="AppointmentType"/>
+
+    <input type="submit" value="Make Appointment" class="btn btn-success" />
+    <a asp-controller="Appointment" asp-action="Index" class="btn btn-secondary">Voltar</a>'"
+
+</form>
